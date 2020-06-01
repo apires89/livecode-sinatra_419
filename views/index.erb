@@ -1,0 +1,23 @@
+<h1>My Restaurant app</h1>
+<p>Here will show the list of all my restaurants</p>
+<ul>
+  <% @restaurants.each do |restaurant| %>
+   <li><%= restaurant.name %><a href="restaurants/<%= restaurant.id %>">See more</a></li>
+  <% end %>
+</ul>
+
+
+<h1>Add a new Restaurant</h1>
+
+<form action="/restaurants" method="post">
+  <label for="name">NAME</label>
+  <input type="text" name="name">
+  <label for="city">CITY</label>
+  <input type="text" name="city">
+  <input type="submit">
+</form>
+
+
+<%= Time.now %>
+
+
